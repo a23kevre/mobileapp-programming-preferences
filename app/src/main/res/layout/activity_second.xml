@@ -3,12 +3,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".SecondActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        tools:ignore="MissingConstraints" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Skriv något här"
+            android:id="@+id/settingseditview"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:text="@string/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/prefButton"
+            android:onClick="savePref"
+            app:layout_constraintTop_toBottomOf="@+id/settingseditview"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:layout_below="@+id/prefButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/prefText"
+            app:layout_constraintTop_toBottomOf="@+id/prefButton"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
